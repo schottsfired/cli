@@ -28,6 +28,9 @@ export function createSarifOutputForOpenSource(
       tool: {
         driver: {
           name: 'Snyk Open Source',
+          properties: {
+            artifactsScanned: testResult.dependencyCount
+          },
           rules: getRules(testResult),
         },
       },

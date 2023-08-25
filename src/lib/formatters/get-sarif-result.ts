@@ -10,6 +10,7 @@ export function getResults(testResult): sarif.Result[] {
     groupedVulnerabilities,
     ([vuln]): sarif.Result => ({
       ruleId: vuln.id,
+      rank: (vuln as CvssScore).cvssScore,
       level: getLevel(vuln),
       message: {
         text: `This file introduces a vulnerable ${vuln.packageName} package with a ${vuln.severity} severity vulnerability.`,
@@ -31,6 +32,10 @@ export function getResults(testResult): sarif.Result[] {
       ],
     }),
   );
+}
+
+interface CvssScore {
+  cvssScore: number;
 }
 
 export function getLevel(vuln: AnnotatedIssue) {

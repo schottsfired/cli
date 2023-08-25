@@ -23,12 +23,16 @@ Object {
           "message": Object {
             "text": "This file introduces a vulnerable ajv package with a critical severity vulnerability.",
           },
+          "rank": 7.5,
           "ruleId": "SNYK-JS-AJV-584908",
         },
       ],
       "tool": Object {
         "driver": Object {
           "name": "Snyk Open Source",
+          "properties": Object {
+            "artifactsScanned": 969,
+          },
           "rules": Array [
             Object {
               "fullDescription": Object {

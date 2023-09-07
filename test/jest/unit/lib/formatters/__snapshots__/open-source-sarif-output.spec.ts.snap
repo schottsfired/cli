@@ -18,6 +18,11 @@ Object {
           "level": "error",
           "locations": Array [
             Object {
+              "logicalLocations": Array [
+                Object {
+                  "fullyQualifiedName": "ajv@6.12.2",
+                },
+              ],
               "physicalLocation": Object {
                 "artifactLocation": Object {
                   "uri": "package.json",

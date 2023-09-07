@@ -28,6 +28,11 @@ export function getResults(testResult): sarif.Result[] {
               startLine: vuln.lineNumber || 1,
             },
           },
+          logicalLocations: [
+            {
+              fullyQualifiedName: `${vuln.packageName}@${vuln.version}`,
+            }
+          ]
         },
       ],
       fixes: vuln.isUpgradable

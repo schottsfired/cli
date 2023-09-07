@@ -30,6 +30,16 @@ export function getResults(testResult): sarif.Result[] {
           },
         },
       ],
+      fixes: vuln.isUpgradable
+        ? [
+            {
+              description: {
+                text: `Upgrade ${vuln.packageName} to version ${vuln.fixedIn}`,
+              },
+              artifactChanges: [],
+            },
+          ]
+        : undefined,
     }),
   );
 }

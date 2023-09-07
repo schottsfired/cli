@@ -7,6 +7,14 @@ Object {
     Object {
       "results": Array [
         Object {
+          "fixes": Array [
+            Object {
+              "artifactChanges": Array [],
+              "description": Object {
+                "text": "Upgrade ajv to version 6.12.3",
+              },
+            },
+          ],
           "level": "error",
           "locations": Array [
             Object {
